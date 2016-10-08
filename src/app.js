@@ -7,8 +7,6 @@ angular.module('sortApp', [])
   $scope.sortReverse  = false;  // set the default sort order
   $scope.searchTechnologies   = '';     // set the default search/filter term
   
-
-  // create the list of sushi rolls 
   $scope.employees = [
     { name: 'Jarek Kroczek', technologies: '.NET, JavaScript', team: 'Team Parrots', hobbies: 'Lyzwy, narty, plywanie, planszowki', picture: 'https://theguyfrom4staff.files.wordpress.com/2014/08/this-member-chose-to-be-shown-as-anonymous.png' },
     { name: 'Anna Bak', technologies: 'Java, C++', team: 'Team XXX', hobbies: 'Spotkania u cioci na imieninach', picture: 'https://theguyfrom4staff.files.wordpress.com/2014/08/this-member-chose-to-be-shown-as-anonymous.png' },
