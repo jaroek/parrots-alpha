@@ -10,10 +10,10 @@ angular.module('sortApp', [])
 
   // create the list of sushi rolls 
   $scope.employees = [
-    { name: 'Jarek Kroczek', technologies: '.NET', team: 'Team AXX', hobbies: 'Lyzwy, narty, plywanie, planszowki', picture: 'https://theguyfrom4staff.files.wordpress.com/2014/08/this-member-chose-to-be-shown-as-anonymous.png' },
-    { name: 'Anna Bak', technologies: 'Java, C++', team: 'Team XXX', hobbies: 'Lyzwy, narty, plywanie, planszowki', picture: 'https://theguyfrom4staff.files.wordpress.com/2014/08/this-member-chose-to-be-shown-as-anonymous.png' },
-    { name: 'Arek Romaniuk', technologies: 'PHP, JavaScript', team: 'Team BXX', hobbies: 'Lyzwy, narty, plywanie, planszowki', picture: 'https://theguyfrom4staff.files.wordpress.com/2014/08/this-member-chose-to-be-shown-as-anonymous.png' },
-    { name: 'Tadeusz Watrobka', technologies: 'Erlang', team: 'Team XXX', hobbies: 'Lyzwy, narty, plywanie, planszowki', picture: 'https://theguyfrom4staff.files.wordpress.com/2014/08/this-member-chose-to-be-shown-as-anonymous.png' }
+    { name: 'Jarek Kroczek', technologies: '.NET, JavaScript', team: 'Team Parrots', hobbies: 'Lyzwy, narty, plywanie, planszowki', picture: 'https://theguyfrom4staff.files.wordpress.com/2014/08/this-member-chose-to-be-shown-as-anonymous.png' },
+    { name: 'Anna Bak', technologies: 'Java, C++', team: 'Team XXX', hobbies: 'Spotkania u cioci na imieninach', picture: 'https://theguyfrom4staff.files.wordpress.com/2014/08/this-member-chose-to-be-shown-as-anonymous.png' },
+    { name: 'Arek Romaniuk', technologies: 'PHP, JavaScript', team: 'Team 010101', hobbies: 'Snowboard, windsurfing', picture: 'https://theguyfrom4staff.files.wordpress.com/2014/08/this-member-chose-to-be-shown-as-anonymous.png' },
+    { name: 'Tadeusz Watrobka', technologies: 'Erlang', team: 'Team 70s and 80s', hobbies: 'Karty, szachy', picture: 'https://theguyfrom4staff.files.wordpress.com/2014/08/this-member-chose-to-be-shown-as-anonymous.png' }
   ];
   
 });
