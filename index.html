@@ -15,7 +15,7 @@
                 </div>
             </div>
         </form>
-        <div>
+        <div class="section_">
             <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
             Name 
             <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
@@ -33,12 +33,14 @@
           </a>
         </div>
 
-        <div ng-repeat="employee in employees | orderBy:sortType:sortReverse | filter:searchTechnologies">
-            <span><img ng-src="{{ employee.picture }}" /></span>
-            <span>{{ employee.name }}</span>
-            <span>Pracuje w: {{ employee.technologies }}</span>
-            <span>Team: {{ employee.team }}</span>
-            <span>Zainteresowania: {{ employee.hobbies }}</span>
+        <div class="section_profiles">
+            <div class="profile_main" ng-repeat="employee in employees | orderBy:sortType:sortReverse | filter:searchTechnologies">
+                <span class="worker_photo"><img ng-src="{{ employee.picture }}" /></span>
+                <span>{{ employee.name }}</span>
+                <span>Pracuje w: {{ employee.technologies }}</span>
+                <span>Team: {{ employee.team }}</span>
+                <span>Zainteresowania: {{ employee.hobbies }}</span>
+            </div>
         </div>
 
 

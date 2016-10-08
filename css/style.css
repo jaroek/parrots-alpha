@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+	border-box: box-sizing;
+	font-size: 18px;
+}
+
+.container {
+	max-width: 1920px;
+}
+
+.section_profiles {
+	width: 100%;
+	padding: 0 50px;
+}
+
+.profile_main {
+	display: inline-block;
+	float: left;
+	width: 270px;
+	border: 1px solid #000;
+	margin-right: 50px;
+
+}
+
+span {
+	display: inline-block;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
