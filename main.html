@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<body>
+
+    <script>
+
+    angular.module('sortApp', [])
+
+
+.controller('mainController', function($scope) {
+  $scope.sortType     = 'name'; // set the default sort type
+  $scope.sortReverse  = false;  // set the default sort order
+  $scope.searchTechnologies   = '';     // set the default search/filter term
+  
+
+  // create the list of sushi rolls 
+  $scope.sushi = [
+    { name: 'Jarek Kroczek', technologies: 'Java', team: 'Team XXX' },
+    { name: 'Anna Bąk', technologies: 'Java', team: 'Team XXX' },
+    { name: 'Arek Romaniuk', technologies: 'Java', team: 'Team XXX' },
+    { name: 'Tadeusz Wątróbka', technologies: 'Java', team: 'Team XXX' }
+  ];
+  
+});
+    </script>
+
+    <div class="container" ng-app="sortApp" ng-controller="mainController">
+
+<!--
+        <div class="alert alert-info">
+            <p>Sort Type: {{ sortType }}</p>
+            <p>Sort Reverse: {{ sortReverse }}</p>
+            <p>Search Query: {{ searchTechnologies }}</p>
+        </div>
+-->
+        <form>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                    <input type="text" class="form-control" placeholder="Search" ng-model="searchTechnologies">
+                </div>
+            </div>
+        </form>
+
+        <table class="table table-bordered table-striped">
+
+            <thead>
+                <tr>
+                    <td>
+                        <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+            Name 
+            <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+                    </td>
+                    <td>
+                        <a href="#" ng-click="sortType = 'technologies'; sortReverse = !sortReverse">
+          Technologies 
+            <span ng-show="sortType == 'technologies' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'technologies' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+                    </td>
+                    <td>
+                        <a href="#" ng-click="sortType = 'team'; sortReverse = !sortReverse">
+          Team 
+            <span ng-show="sortType == 'team' && !sortReverse" class="fa fa-caret-down"></span>
+            <span ng-show="sortType == 'team' && sortReverse" class="fa fa-caret-up"></span>
+          </a>
+                    </td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchTechnologies">
+                    <td>{{ roll.name }}</td>
+                    <td>{{ roll.technologies }}</td>
+                    <td>{{ roll.team }}</td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        
+    </div>
+
+</body>
+
+</html>
