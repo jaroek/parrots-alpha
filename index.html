@@ -4,7 +4,7 @@
 <script type="text/javascript" src="src/app.js"></script>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
-<body>  
+<body>
     <div class="container" ng-app="sortApp" ng-controller="mainController">
 
         <form>
@@ -15,47 +15,34 @@
                 </div>
             </div>
         </form>
-
-        <table class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                    <td>
-                        <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
+        <div>
+            <a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">
             Name 
             <span ng-show="sortType == 'name' && !sortReverse" class="fa fa-caret-down"></span>
             <span ng-show="sortType == 'name' && sortReverse" class="fa fa-caret-up"></span>
           </a>
-                    </td>
-                    <td>
-                        <a href="#" ng-click="sortType = 'technologies'; sortReverse = !sortReverse">
-          Technologies 
+            <a href="#" ng-click="sortType = 'technologies'; sortReverse = !sortReverse">
+            Technologies 
             <span ng-show="sortType == 'technologies' && !sortReverse" class="fa fa-caret-down"></span>
             <span ng-show="sortType == 'technologies' && sortReverse" class="fa fa-caret-up"></span>
           </a>
-                    </td>
-                    <td>
-                        <a href="#" ng-click="sortType = 'team'; sortReverse = !sortReverse">
-          Team 
+            <a href="#" ng-click="sortType = 'team'; sortReverse = !sortReverse">
+            Team 
             <span ng-show="sortType == 'team' && !sortReverse" class="fa fa-caret-down"></span>
             <span ng-show="sortType == 'team' && sortReverse" class="fa fa-caret-up"></span>
           </a>
-                    </td>
-                </tr>
-            </thead>
+        </div>
 
-            <tbody>
-                <div ng-repeat="employee in employees | orderBy:sortType:sortReverse | filter:searchTechnologies">
-                    <span><img ng-src="{{ employee.picture }}" /></span>
-                    <span>{{ employee.name }}</span>
-                    <span>Pracuje w: {{ employee.technologies }}</span>
-                    <span>Team: {{ employee.team }}</span>
-                    <span>Zainteresowania: {{ employee.hobbies }}</span>
-                </div>
-            </tbody>
+        <div ng-repeat="employee in employees | orderBy:sortType:sortReverse | filter:searchTechnologies">
+            <span><img ng-src="{{ employee.picture }}" /></span>
+            <span>{{ employee.name }}</span>
+            <span>Pracuje w: {{ employee.technologies }}</span>
+            <span>Team: {{ employee.team }}</span>
+            <span>Zainteresowania: {{ employee.hobbies }}</span>
+        </div>
 
-        </table>
 
-        
+
     </div>
 
 </body>
