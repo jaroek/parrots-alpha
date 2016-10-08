@@ -17,7 +17,6 @@
         </form>
 
         <table class="table table-bordered table-striped">
-
             <thead>
                 <tr>
                     <td>
@@ -45,11 +44,11 @@
             </thead>
 
             <tbody>
-                <tr ng-repeat="employee in employees | orderBy:sortType:sortReverse | filter:searchTechnologies">
-                    <td>{{ employee.name }}</td>
-                    <td>{{ employee.technologies }}</td>
-                    <td>{{ employee.team }}</td>
-                </tr>
+                <div ng-repeat="employee in employees | orderBy:sortType:sortReverse | filter:searchTechnologies">
+                    <span>{{ employee.name }}</span>
+                    <span>{{ employee.technologies }}</span>
+                    <span>{{ employee.team }}</span>
+                </div>
             </tbody>
 
         </table>
