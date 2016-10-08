@@ -45,6 +45,7 @@
 
             <tbody>
                 <div ng-repeat="employee in employees | orderBy:sortType:sortReverse | filter:searchTechnologies">
+                    <span><img ng-src="{{ employee.picture }}" /></span>
                     <span>{{ employee.name }}</span>
                     <span>{{ employee.technologies }}</span>
                     <span>{{ employee.team }}</span>
