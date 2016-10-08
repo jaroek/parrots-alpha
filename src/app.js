@@ -9,7 +9,7 @@ angular.module('sortApp', [])
   
 
   // create the list of sushi rolls 
-  $scope.sushi = [
+  $scope.employees = [
     { name: 'Jarek Kroczek', technologies: 'Java', team: 'Team XXX' },
     { name: 'Anna Bak', technologies: 'Java', team: 'Team XXX' },
     { name: 'Arek Romaniuk', technologies: 'Java', team: 'Team XXX' },

@@ -3,18 +3,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script type="text/javascript" src="src/app.js"></script>
 
-<body>
-
-  
+<body>  
     <div class="container" ng-app="sortApp" ng-controller="mainController">
 
-<!--
-        <div class="alert alert-info">
-            <p>Sort Type: {{ sortType }}</p>
-            <p>Sort Reverse: {{ sortReverse }}</p>
-            <p>Search Query: {{ searchTechnologies }}</p>
-        </div>
--->
         <form>
             <div class="form-group">
                 <div class="input-group">
@@ -53,10 +44,10 @@
             </thead>
 
             <tbody>
-                <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchTechnologies">
-                    <td>{{ roll.name }}</td>
-                    <td>{{ roll.technologies }}</td>
-                    <td>{{ roll.team }}</td>
+                <tr ng-repeat="employee in employees | orderBy:sortType:sortReverse | filter:searchTechnologies">
+                    <td>{{ employee.name }}</td>
+                    <td>{{ employee.technologies }}</td>
+                    <td>{{ employee.team }}</td>
                 </tr>
             </tbody>
 
