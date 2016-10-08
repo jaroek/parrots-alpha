@@ -1,31 +1,11 @@
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="src/app.js"></script>
 
 <body>
 
-    <script>
-
-    angular.module('sortApp', [])
-
-
-.controller('mainController', function($scope) {
-  $scope.sortType     = 'name'; // set the default sort type
-  $scope.sortReverse  = false;  // set the default sort order
-  $scope.searchTechnologies   = '';     // set the default search/filter term
   
-
-  // create the list of sushi rolls 
-  $scope.sushi = [
-    { name: 'Jarek Kroczek', technologies: 'Java', team: 'Team XXX' },
-    { name: 'Anna Bąk', technologies: 'Java', team: 'Team XXX' },
-    { name: 'Arek Romaniuk', technologies: 'Java', team: 'Team XXX' },
-    { name: 'Tadeusz Wątróbka', technologies: 'Java', team: 'Team XXX' }
-  ];
-  
-});
-    </script>
-
     <div class="container" ng-app="sortApp" ng-controller="mainController">
 
 <!--
